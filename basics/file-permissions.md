@@ -1,24 +1,38 @@
 # Linux File Permissions
 
-## Understanding Permissions
-Linux uses three types of permissions:
+## Viewing permissions
 
-- Read (r)
-- Write (w)
-- Execute (x)
+Command:
+ls -l
 
-They apply to:
+Example output:
+-rwxr-xr-- 1 user user 0 Mar 1 test.sh
 
-- Owner
-- Group
-- Others
+Explanation:
+r = read
+w = write
+x = execute
+
+---
+
+## Changing permissions
+
+Command:
+chmod
+
+Examples:
+
+chmod +x script.sh
+chmod 755 script.sh
+chmod 644 file.txt
+
+---
+
+## Changing ownership
+
+Command:
+chown
 
 Example:
 
--rwxr-xr--
-
-Commands used:
-
-ls -l
-chmod
-chown
+sudo chown user:file file.txt
